@@ -13,17 +13,9 @@ namespace ClassProj3
 		//	return result;        
 		//}
 
-        public static int MathOperation(int numberOne, params int[] numberTwo)
+        public static int MathOperation(int numberOne, int numberTwo = 10)
 		{
-			int result = numberOne;
-
-			if (numberTwo != null)
-			{
-				foreach (var i in numberTwo)
-				{
-					result += i;
-				}
-			}         
+			int result = numberOne + numberTwo;
 			return result;
 		}
     }

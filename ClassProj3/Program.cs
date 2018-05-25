@@ -10,17 +10,17 @@ namespace ClassProj3
 			int numberOne = int.Parse(Console.ReadLine());
             
 			Console.WriteLine("Input second number. (optional)");
-			if (Console.ReadLine() != null)
+			string numberTwo = Console.ReadLine();
+
+			if (numberTwo.Length == 0)
 			{
-				int numberTwo = int.Parse(Console.ReadLine());
-				Console.WriteLine(Calculation.MathOperation(numberOne, numberTwo));
+				Console.WriteLine(Calculation.MathOperation(numberOne));
 			}
 
 			else
-			{
-				int numberTwo = 0;
-				Console.WriteLine(Calculation.MathOperation(numberOne, numberTwo));            
+   			{
+				Console.WriteLine(Calculation.MathOperation(numberOne, int.Parse(numberTwo)));
 			}
-        }
+		}
     }
 }
